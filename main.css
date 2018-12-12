@@ -1,0 +1,72 @@
+@import "normalize.css";
+
+:root {
+    --primary: #006782;
+    --light: #DCDCDD;
+    --dark: #46494C;
+    --secondary:#4C5C68;
+    --medium:#c5c3c6;
+  }
+
+
+  #broadcastImage{
+  margin-left: auto;
+  margin-right: auto;
+display: block;
+  }
+
+  
+  
+  header, main, footer {
+    display: block;
+  }
+  header{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around ;
+      height: 600px;
+    
+    background: var(--primary);
+    color: var(--secondary);
+    background: url(https://images.pexels.com/photos/484/sound-speaker-radio-microphone.jpg) var(--primary) no-repeat;
+    background-size: cover;    
+  } 
+
+  h1, h2, h3, h4 {
+      text-align: center;
+  }
+  
+  #broadcastControls {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    padding: 50px 16px;
+    background: var(--medium);
+    color: var(--dark);
+    z-index: 2;
+  
+  }
+  main {
+    position: relative;
+    z-index: 1;
+    background-color:var(--light);
+    color: var(--dark);
+    margin-bottom: 200px;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color:var(--primary);
+    color: var(--medium);
+  }
+
+  .bgImage{
+
+  }
+
+
+
+  
