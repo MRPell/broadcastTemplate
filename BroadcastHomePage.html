@@ -1,24 +1,274 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>FOTF Broadcast Homepage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="main.js"></script>
-</head>
-<body>
-        <header class="header" id="header">
-            <div>
-            <img src="https://ci5.googleusercontent.com/proxy/EdhIm6pGsYs6EXA2-cHB_XVvSP-HdNnkOhCg3Af_a0qf1qtX9fty5IvoYm6g4y6jVJc_Se8lKSJql7K4TkZsIv8bh8v5GiFOoGoMd7hEUQ=s0-d-e1-ft#http://email.fotf.com/imgproxy/img/3002311433/dbd-player.png" class="image" id="broadcastImage"/>
-                <h2>Broadcast Title and background Image</h2></div>
-                
-               </header>
-               <section  id="broadcastControls"><h2>Broadcast Controls</h2></section>
-               <main>main type selector 1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20<br />21<br />22<br />23<br />24<br />25<br />26<br />27<br />28<br />29<br />30<br />31<br />32<br />33<br />34<br />35<br />36<br />37<br />38<br />39<br />40<br />41<br />42<br />43<br />44<br />45<br />46<br />47<br />48<br />49<br />50</main>
-               <footer>footer type selector 1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />Test if footer content is interactive: <a href="http://www.google.com">Google (google.com)</a>.<br />Web browser support: IE9+, ED12+, FF3+, SF3.1+, CH2+, OP9+.</footer>
-              </body>
+ <head>
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>FOTF Broadcast Homepage</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+ <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="main.js"></script>
+ <style>
+@import "normalize.css";
+:root {
+ --headerFooter: #006782;
+ --lightText: #f5f5f4;
+ --mainBackground: #f5f5f4;
+ --dark: #46494C;
+ --secondary:#4C5C68;
+ --medium:#c5c3c6;
 
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+body, html {
+	margin: 0;
+	padding: 0;
+	line-height: 150%;
+	color: #555555;
+	height: 100%;
+}
+
+footer {
+	display: flex;
+	align-items: flex-end;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100vh;
+	background-color: var(--headerFooter);
+	color: var(--medium);
+	z-index: -1;
+	width: 100%;
+}
+h1{
+	font-size:36px;
+}
+header {
+	width: 100%;
+	padding: 20px 0px;
+	background: var(--headerFooter);
+	color: var(--dark);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+main {
+	position: relative;
+	background-color: var(--mainBackground);
+	color: var(--dark);
+	margin-bottom: 400px;
+}
+.altText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #000000;
+}
+
+.card{
+	max-width:900px;
+	margin:0 auto;}
+	
+	.hostImage{
+		display:block;
+		max-width:280px;
+	}
+	
+	.hostBio{
+		padding: 2em;
+	}
+	
+	.section{
+		padding:2em 0;
+	}
+
+#broadcastImage {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+#featuredBroadcastContainer {
+	display: grid;
+	grid-template-columns: 2fr 10fr 2fr;
+	grid-template-rows: auto auto auto auto;
+	color: var(--lightText);
+	grid-gap: 5px 10px;
+	justify-items: start;
+	align-items: center;
+
+}
+
+#featuredSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;	
+	background: var(--headerFooter);
+	color: var(--secondary);
+	background: url(https://link.focusonthefamily.com/email/CRM/images/sound-speaker-radio-microphone.jpg) var(--headerFooter) no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+#footerContent {
+	width: 100%;
+ background-color: color: var(--headerFooter);
+	color: var(--light);
+}
+#headerNav {
+	display: flex;
+	justify-content: space-between;
+	min-width: 350px;
+	margin: 0 2em;
+	color: var(--lightText);
+}
+#hostContainer{
+	display:flex;
+	background:var(--mainBackground);
+	
+	justify-content: space-around;
+	align-items: top;
+	
+	
+}
+#hostSection{
+	background:#ffffff;
+	
+}
+#logo {
+	max-width: 200px;
+	height: auto;
+}
+#logoContainer {
+	margin: 0 2em;
+}
+
+		 @media screen and (max-width: 670px) {
+				.flexContainer{
+					flex-direction:column;
+		
+	}
+		}
+
+</style>
+ </head>
+ <body>
+<header  id="header" >
+   <div id="logoContainer">
+    <a href="https://www.focusonthefamily.com"><img src="http://link.focusonthefamily.com/email/CRMeseries/logos/logo-FOTF-Horizontal-white.png" alt="Focus on the Family" id="logo"/></a>
+  </div>
+   <nav id="headerNav" >
+    <h4><a href="#">Top</a></h4>
+    <h4><a href="#">Archives</a></h4>
+    <h4><a href="#">Add Broadcast</a></h4>
+    <h4><a href="mailto:mrpell25@gmail.com">Contact</a></h4>
+  </nav>
+ </header>
+<section  id="featuredSection" >
+   <div id="featuredBroadcastContainer" class="card">
+    <div>
+    </div>
+    <div><h3>Today's Broadcast</h3>
+     </div>
+    <div>
+    </div>
+    <div>Play Icon
+     </div>
+    <div><h1>Broadcast Title</h1>
+     </div>
+    <div>
+     </div>
+    <div>Prev Arrow
+     </div>
+    <div>   <h3>Broadcast Guests  </h3>
+     </div>
+    <div>
+ <i class="fas fa-angle-right" style="font-size:60px;color:red;"></i>
+     </div>
+    <div>
+     </div>
+    <div><p>Broadcast Description</p></div>
+    <div>
+     </div>
+  </div>
+ </section>
+ <section id="hostSection" class="section">
+ <div id="hostContainer" class="card flexContainer">
+ <div class="hostBio"><img src="http://link.focusonthefamily.com/email/CRM/11/VidScreenShot.jpg"   class="hostImage"/><h2>Jim Daly</h2><p>Jim Daly is an author and broadcaster, president of Focus on the Family and host of the daily broadcast, heard by more than 6.3 million listeners a week and honored as 2012 Program of the Year by the National Religious Broadcasters.
+</p></div>
+ <div class="hostBio"><img src="http://link.focusonthefamily.com/email/CRM/11/VidScreenShot.jpg" class="hostImage" /><h2>John Fuller</h2><p>John Fuller is vice president of the Audio division and co-host of the daily "Focus on the Family" radio program. He speaks and writes about family, faith, media and business. John and his wife, Dena, reside in Colorado Springs, Colo., and have six children.</p></div>
+ </div>
+ </section>
+<main  class="section">
+	<div class="card">
+    <h1>Past Episodes</h1>
+    </div>main type selector 1<br />
+   2<br />
+   3<br />
+   4<br />
+   5<br />
+   6<br />
+   7<br />
+   8<br />
+   9<br />
+   10<br />
+   11<br />
+   12<br />
+   13<br />
+   14<br />
+   15<br />
+   16<br />
+   17<br />
+   18<br />
+   19<br />
+   20<br />
+   21<br />
+   22<br />
+   23<br />
+   24<br />
+   25<br />
+   26<br />
+   27<br />
+   28<br />
+   29<br />
+   30<br />
+   31<br />
+   32<br />
+   33<br />
+   34<br />
+   35<br />
+   36<br />
+   37<br />
+   38<br />
+   39<br />
+   40<br />
+   41<br />
+   42<br />
+   43<br />
+   44<br />
+   45<br />
+   46<br />
+   47<br />
+   48<br />
+   49<br />
+   50</main>
+<footer >
+   <section id="footerContent">footer type selector 1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    Test if footer content is interactive: <a href="http://www.google.com">Google (google.com)</a>.<br />
+    Web browser support: IE9+, ED12+, FF3+, SF3.1+, CH2+, OP9+. </section>
+ </footer>
+</body>
